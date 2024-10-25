@@ -16,8 +16,8 @@ def crt_monthly_counts_avg(df):
     monthly_counts_avg = df.groupby("month")[["casual", "registered"]].mean()
     return monthly_counts_avg
 
-day_df = pd.read_csv("day_df.csv")
-hour_df = pd.read_csv("hour_df.csv")
+day_df = pd.read_csv("/workspaces/Proyek-Analisis-Data-Bike-Sharing-Dataset/dashboard_dicoding/day_df.csv")
+hour_df = pd.read_csv("/workspaces/Proyek-Analisis-Data-Bike-Sharing-Dataset/dashboard_dicoding/hour_df.csv")
 
 min_month = day_df["month"].min()
 max_month = day_df["month"].max()
@@ -25,15 +25,6 @@ max_month = day_df["month"].max()
 monthly_counts_avg = crt_monthly_counts_avg(day_df)
 partOfDay_counts = crt_partOfDay_counts(hour_df)
 weather_counts = crt_weather_counts(hour_df)
-
-# with st.sidebar:
-#     st.image(
-#         "https://back.3blmedia.com/sites/default/files/styles/ratio_3_2/public/triplepundit/wide/BlueBikes%20in%20Boston%20is%20among%20many%20successful%20bike%20share%20programs.png?h=85ee54f6",
-#         use_column_width="always"
-#     )
-#     st.write("""
-# Dashboard ini adalah bagian dari rangkaian tugas proyek akhir analisis data yang diadakan oleh dicoding.com 
-# """) 
 
 st.title("Dashboard Analisis Data Bike Sharing")
 st.page_link("https://www.linkedin.com/in/yogarusydia/", label="by: Yoga Rusydi Arifin")
