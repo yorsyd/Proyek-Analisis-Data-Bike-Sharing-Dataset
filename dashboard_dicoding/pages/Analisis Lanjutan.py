@@ -1,11 +1,11 @@
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
+#import matplotlib.pyplot as plt
+#import seaborn as sns
 import streamlit as st
 
-day_df = pd.read_csv("day_df.csv")
-hour_df = pd.read_csv("hour_df.csv")
+day_df = pd.read_csv("/workspaces/Proyek-Analisis-Data-Bike-Sharing-Dataset/dashboard_dicoding/day_df.csv")
+hour_df = pd.read_csv("/workspaces/Proyek-Analisis-Data-Bike-Sharing-Dataset/dashboard_dicoding/hour_df.csv")
 
 min_month = day_df["month"].min()
 max_month = day_df["month"].max()
