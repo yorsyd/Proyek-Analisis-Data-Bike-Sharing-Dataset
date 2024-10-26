@@ -16,8 +16,8 @@ def crt_monthly_counts_avg(df):
     monthly_counts_avg = df.groupby("month")[["casual", "registered"]].mean()
     return monthly_counts_avg
 
-day_df = pd.read_csv("day_df.csv")
-hour_df = pd.read_csv("hour_df.csv")
+day_df = pd.read_csv("dashboard_dicoding/day_df.csv")
+hour_df = pd.read_csv("dashboard_dicoding/hour_df.csv")
 
 min_month = day_df["month"].min()
 max_month = day_df["month"].max()
